@@ -6,17 +6,16 @@
   --primary-bg: #272B33;
   --primary-color: #FBC02D;
   --secondary-color: #FD5115;
+  --card-color: #3C3E44;
 }
 
 body {
-  background-color: var(--primary-bg);
-  min-height: 100dvh;
+  background-color: var(--primary-bg);  
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  color: #FFF;
+  box-sizing: border-box;  
 }
 

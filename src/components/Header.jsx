@@ -1,7 +1,7 @@
 import { useState } from "react";
 import dragonBallLogo from "../assets/dragon-ball.webp";
 
-export const Header = () => {
+export const Header = ({ input, handleChange }) => {
   const [show, setShow] = useState(false);
 
   const handleShow = () => {
@@ -9,7 +9,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 h-[3.5rem] w-full bg-white flex flex-row justify-between items-center px-8 overflow-x-hidden">
+    <header className="sticky top-0 z-50 h-[3.5rem] w-full bg-white flex flex-row justify-between items-center px-8 overflow-x-hidden [&>*]:text-white">
       <figure className="w-[3rem]">
         <img src={dragonBallLogo} alt="DBZ logo" />
       </figure>
@@ -20,8 +20,8 @@ export const Header = () => {
             type="text"
             className="input-search pl-4 py-2 text-sm outline-none bg-[var(--primary-bg)] transition-all w-[100%] lg:w-[22rem]"
             placeholder="Search character..."
-            /*  onChange={handleChange}
-              vavlue={value} */
+            onChange={handleChange}
+            value={input}
           />
           <button className="flex items-center justify-center px-4 bg-[var(--primary-bg)]">
             <svg
@@ -63,7 +63,7 @@ export const Header = () => {
       </div>
       <div
         className="[&>*]:text-[var(--primary-bg)] text-xl lg:text-2xl flex flex-row items-center justify-center gap-x-[1px] font-semibold cursor-pointer transition duration-500"
-        onClick={handleShow}
+        /* onClick={handleShow} */
       >
         <span>M</span>
         <div className="flex flex-col items-center justify-between center [&>span]:w-full [&>span]:h-[3px] [&>span]:bg-[var(--primary-bg)] size-[1rem] mx-[2px]">
