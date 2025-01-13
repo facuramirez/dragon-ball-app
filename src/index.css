@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg: #272B33;
+  --primary-color: #FBC02D;
+  --secondary-color: #FD5115;
+}
+
+body {
+  background-color: var(--primary-bg);
+  min-height: 100dvh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #FFF;
+}
+
