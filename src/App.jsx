@@ -1,17 +1,18 @@
-import { DragonMain } from "./components/DragonMain";
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
-import { useSearch } from "./hooks/useSearch";
+import { Switch } from "wouter";
+import { Route } from "wouter";
+import { Main } from "./pages/Main";
+import { Redirect } from "wouter";
 
 function App() {
-  const { input, handleChange } = useSearch();
-
   return (
-    <div className="flex flex-col gap-y-10 min-h-dvh justify-between">
-      <Header input={input} handleChange={handleChange} />
-      <DragonMain input={input} />
-      <Footer />
-    </div>
+    <Switch>
+      <Route path="/" component={Main} />
+
+      {/* Default route in a switch */}
+      <Route>
+        <Redirect to="/" />
+      </Route>
+    </Switch>
   );
 }
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../css/DragonItem.css";
 
 export const DragonItem = ({
@@ -11,7 +12,7 @@ export const DragonItem = ({
 }) => {
   return (
     <div className="dragon-item flex flex-col rounded-2xl">
-      <figure className="w-full h-[20rem] object-cover self-center rounded-t-lg">
+      <figure className="w-full h-[15rem] md:h-[20rem] object-cover self-center rounded-t-lg">
         <img
           src={image}
           alt={name}
