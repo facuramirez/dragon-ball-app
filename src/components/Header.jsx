@@ -78,7 +78,7 @@ export const Header = ({ input, handleChange, resetInput }) => {
           show
             ? "right-0"
             : "right-[-18rem] md:right-[-23rem] lg:right-[-30rem]"
-        } h-dvh w-[18rem] md:w-[23rem] lg:w-[30rem] bg-slate-800 transition-all duration-300 p-6 flex flex-col gap-y-16`}
+        } h-dvh w-[18rem] md:w-[23rem] lg:w-[30rem] bg-slate-800 transition-all duration-300 p-6 flex flex-col gap-y-8`}
       >
         <figure className="size-[1.5rem] cursor-pointer" onClick={handleShow}>
           <img src={Hidden} alt="hidden" />
@@ -88,7 +88,7 @@ export const Header = ({ input, handleChange, resetInput }) => {
             Filtros
           </h3>
           <div className="h-[1px] w-full bg-[#ccc]"></div>
-          <div className="flex flex-col gap-x-4 [&>form>label]:text-base [&>form>label]:lg:text-lg [&>form]:w-full [&>form]:lg:w-[80%] [&>form]:mx-auto h-full">
+          <div className="flex flex-col gap-x-4 [&>form>label]:text-sm [&>form>label]:lg:text-base [&>form]:w-full [&>form]:lg:w-[80%] [&>form]:mx-auto h-full">
             <form>
               <label
                 className="block mb-2 font-medium text-white"
@@ -172,18 +172,18 @@ export const Header = ({ input, handleChange, resetInput }) => {
               <div className="h-[1px] w-full bg-[#ccc]"></div>
               <button
                 onClick={handleFilters}
-                className="bg-[var(--secondary-color)] mt-4 text-base md:text-xl lg-text-2xl rounded-md p-2 font-bold text-white"
+                className="bg-[var(--secondary-color)] mt-4 text-sm lg:text-base rounded-md p-2 font-bold text-white"
               >
                 RESET
               </button>
               <button
                 onClick={handleFilters}
-                className="bg-[var(--secondary-color)] text-base md:text-xl lg-text-2xl rounded-md p-2 font-bold text-white"
+                className="bg-[var(--secondary-color)] text-sm lg:text-base rounded-md p-2 font-bold text-white"
               >
                 APPLY
               </button>
             </div>
-            <figure className="hidden lg:block w-[12rem] m-auto">
+            <figure className="hidden lg:block w-[50%] m-auto">
               <img src={ShenLong} alt="ShenLong" className="my-12" />
             </figure>
           </div>
