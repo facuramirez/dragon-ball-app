@@ -41,6 +41,7 @@ export const Header = ({ input, handleChange, resetInput }) => {
         <div className="overflow-hidden flex w-full bg-[var(--primary-bg)]">
           <input
             id="input-search"
+            autoComplete="off"
             type="text"
             className="input-search pl-4 py-2 text-sm outline-none bg-[var(--primary-bg)] transition-all w-full md:w-[22rem]"
             placeholder="Search character..."
